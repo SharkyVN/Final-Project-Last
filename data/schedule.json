@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "owner": "Henry",
+    "title": "Math Quiz",
+    "details": "Learn about Trig",
+    "time": "2025-12-31T16:22",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 2,
+    "owner": "Henry",
+    "title": "Tech Project",
+    "details": "Graphic Design",
+    "time": "2025-12-31T16:23",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 3,
+    "owner": "Henry",
+    "title": "Science Test",
+    "details": "Learn the Periodic Table \ud83e\uddea",
+    "time": "2025-12-31T16:24",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 4,
+    "owner": "Hung",
+    "title": "School Day",
+    "details": "Bring lunch, Sun screen",
+    "time": "2025-12-31T16:34",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 5,
+    "owner": "Hung",
+    "title": "Science Project",
+    "details": "Remake the whole Periodic Table\ud83e\uddea\r\n",
+    "time": "2025-12-31T16:35",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 6,
+    "owner": "Hung",
+    "title": "Math Quiz",
+    "details": "Trig, Pytherom Theorem, \ud83d\udd3a",
+    "time": "2025-12-31T16:36",
+    "created": "2025-12-31"
+  }
+]

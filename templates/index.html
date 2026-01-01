@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2 class="mb-4 fw-bold">📓 Your Notes</h2>
+<a href="{{ url_for('new_note') }}" class="btn btn-success mb-4">➕ New Note</a>
+
+<div class="row g-4">
+{% for note in notes %}
+  <div class="col-md-4">
+    <div class="card h-100 p-3">
+      <h5 class="fw-semibold">{{ note.title }}</h5>
+      <small class="text-muted">{{ note.category }}</small>
+
+      <p class="mt-2 small">{{ note.content }}</p>
+
+      {% if note.schedule %}
+        <span class="badge bg-info mt-2">⏰ Scheduled</span>
+      {% endif %}
+
+      <div class="mt-auto pt-3 d-flex gap-2">
+        <a href="{{ url_for('edit_note', note_id=note.id) }}" class="btn btn-outline-primary btn-sm w-50">Edit</a>
+        <form method="post" action="{{ url_for('delete_note', note_id=note.id) }}" class="w-50">
+          <button class="btn btn-outline-danger btn-sm w-100"
+            onclick="return confirm('Delete this note?')">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% else %}
+  <p class="text-muted">No notes yet.</p>
+{% endfor %}
+</div>
+
+<hr class="my-5">
+
+<h3 class="fw-bold">📅 Upcoming Events</h3>
+<ul class="list-group mt-3">
+{% for e in events %}
+  <li class="list-group-item">
+    <strong>{{ e.title }}</strong><br>
+    <small class="text-muted">{{ e.time }}</small>
+  </li>
+{% else %}
+  <li class="list-group-item text-muted">No events.</li>
+{% endfor %}
+</ul>
+
+<hr class="my-5">
+
+<div class="card">
+  <div class="card-header fw-semibold">🎯 Today's Quests</div>
+  <div class="card-body">
+    {% for qid, label in quests.items() %}
+      <div class="mb-2">
+        <span class="badge {% if label %}bg-success{% else %}bg-secondary{% endif %}">
+          {{ '✅' if label else '⬜' }}
+        </span>
+        {{ qid.replace('_',' ').title() }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

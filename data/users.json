@@ -1,0 +1,72 @@
+[
+  {
+    "username": "Tuna",
+    "email": "",
+    "avatar": "",
+    "dark_mode": false,
+    "quest": {
+      "edit_profile": true
+    },
+    "quest_labels": {
+      "use_darkmode": "Use dark mode",
+      "edit_profile": "Update your profile",
+      "write_note": "Write a note"
+    },
+    "quest_date": "2025-12-31",
+    "quests": {
+      "use_darkmode": true,
+      "edit_profile": true,
+      "write_note": true,
+      "check_notifications": true
+    },
+    "bio": "",
+    "dob": "2011-03-15"
+  },
+  {
+    "username": "Henry",
+    "email": "",
+    "avatar": "",
+    "dark_mode": false,
+    "quest": {
+      "add_event": true
+    },
+    "quest_labels": {
+      "write_note": "Write a note",
+      "add_event": "Add a schedule event",
+      "check_notifications": "Check notifications"
+    },
+    "quest_date": "2025-12-31",
+    "quests": {
+      "write_note": true,
+      "add_event": true,
+      "check_notifications": false,
+      "edit_profile": true
+    },
+    "bio": "",
+    "dob": "2011-03-31"
+  },
+  {
+    "username": "Hung",
+    "email": "",
+    "avatar": "",
+    "dark_mode": false,
+    "quest": {
+      "add_event": true
+    },
+    "quest_labels": {
+      "write_note": "Write a note",
+      "edit_profile": "Update your profile",
+      "check_notifications": "Check notifications"
+    },
+    "quest_date": "2025-12-31",
+    "quests": {
+      "write_note": true,
+      "edit_profile": true,
+      "check_notifications": true,
+      "add_event": true,
+      "use_darkmode": true
+    },
+    "bio": "",
+    "dob": "2011-03-15"
+  }
+]

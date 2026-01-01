@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "owner": "Henry",
+    "title": "Math",
+    "category": "School",
+    "content": "Homework",
+    "schedule": "2025-12-31T16:20",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 2,
+    "owner": "Henry",
+    "title": "Geography",
+    "category": "School",
+    "content": "Weather Project",
+    "schedule": "2025-12-31T16:22",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 3,
+    "owner": "Henry",
+    "title": "Science",
+    "category": "School",
+    "content": "Chemistry homework",
+    "schedule": "2025-12-31T16:23",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 4,
+    "owner": "Hung",
+    "title": "Math",
+    "category": "School",
+    "content": "Homework",
+    "schedule": "2025-12-31T16:30",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 5,
+    "owner": "Hung",
+    "title": "Geography",
+    "category": "School",
+    "content": "Analyze the paragraph about weather",
+    "schedule": "2025-12-31T16:32",
+    "created": "2025-12-31"
+  },
+  {
+    "id": 6,
+    "owner": "Hung",
+    "title": "Science",
+    "category": "School",
+    "content": "Look for an element in Periodic Table that start with H",
+    "schedule": "2025-12-31T16:33",
+    "created": "2025-12-31"
+  }
+]

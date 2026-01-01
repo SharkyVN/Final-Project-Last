@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-8">
+    <div class="card note-card mb-3 p-3">
+      <h5>Add Event</h5>
+      <form action="{{ url_for('add_schedule') }}" method="post">
+        <div class="mb-2">
+          <input name="title" class="form-control rounded-input" placeholder="Event title" required>
+        </div>
+        <div class="mb-2">
+          <textarea name="details" class="form-control rounded-input" rows="2" placeholder="Details (what to do)"></textarea>
+        </div>
+        <div class="mb-2">
+          <label class="form-label small">When</label>
+          <input type="datetime-local" name="time" class="form-control rounded-input" required>
+        </div>
+        <button class="btn btn-primary">Add Event</button>
+      </form>
+    </div>
+
+    <div class="card note-card p-0">
+      <h6 class="p-3 mb-0 border-bottom">Events</h6>
+      <div class="list-group list-group-flush">
+        {% for ev in events %}
+          <div class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <div>
+                <strong>{{ ev.title }}</strong>
+                <div class="small text-muted">{{ ev.time }}</div>
+              </div>
+              <div>
+                <a href="{{ url_for('delete_schedule', event_id=ev.id) }}" class="btn btn-sm btn-outline-danger">Delete</a>
+              </div>
+            </div>
+            <div class="small mt-2">{{ ev.details }}</div>
+          </div>
+        {% else %}
+          <div class="list-group-item small text-muted">No events yet.</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card note-card p-3">
+      <h6>Quick tips</h6>
+      <p class="small text-muted">Events added here show on the dashboard and notifications. "Soon" appears for events within 1 hour.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h3>My Profile</h3>
+<form method="post" class="card p-3" enctype="multipart/form-data">
+  <div class="mb-2">
+    <label>Account Name</label>
+    <input name="username" class="form-control mb-2" value="{{ user.username }}" readonly>
+  </div>
+
+  <div class="mb-2">
+    <label>Date of Birth</label>
+    <input type="date" name="dob" class="form-control mb-2" value="{{ user.get('dob','') }}">
+  </div>
+
+  <div class="mb-2">
+    <label>My Bio</label>
+    <textarea name="bio" class="form-control mb-2">{{ user.get('bio','') }}</textarea>
+  </div>
+
+  <button class="btn btn-primary">Save</button>
+</form>
+
+{% endblock %}

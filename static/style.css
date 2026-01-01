@@ -1,0 +1,76 @@
+/*---------- GLOBAL --------- */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/*---------- DARK MODE ----------*/
+body.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark ::selection,
+body.dark ::-moz-selection {
+    background: #0d6efd;
+    color: #fff;
+}
+
+input, textarea, select {
+    backgroudn-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+/*------------ NAVBAR -------------*/
+.navbar .btn {
+    margin-right: 6px;
+}
+
+.btn-active {
+    background-color:#f8f9fa !important;
+    color: #000 !important;
+}
+
+/*---------- NOTIFICATIONS ----------*/
+#notif-dot {
+    font-size: 0.6rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+.notif-pulse {
+    animation: pulse 1s infinite;
+}
+
+/* SOON badge */
+.badge-soon {
+    background-color: #ffc107;
+    color: #000;
+    font-size: 0.75rem;
+    margin-left: 6px;
+}
+
+/*-------------QUESTS-------------*/
+.quest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.quest-list label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card p-4">
+      <h4 class="fw-bold mb-3">✏️ Edit Note</h4>
+
+      <form method="post">
+        <input name="title" class="form-control mb-3" value="{{ note.title }}" required>
+
+        <select name="category" class="form-select mb-3">
+          {% for opt in ['General','School','Work','Ideas','Personal'] %}
+            <option {% if note.category==opt %}selected{% endif %}>{{ opt }}</option>
+          {% endfor %}
+        </select>
+
+        <textarea name="content" class="form-control mb-3" rows="5">{{ note.content }}</textarea>
+
+        <label class="small text-muted">Schedule</label>
+        <input type="datetime-local" name="schedule" class="form-control mb-4" value="{{ note.schedule }}">
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-primary w-50">Save</button>
+          <a href="/" class="btn btn-outline-secondary w-50">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
